@@ -553,7 +553,8 @@ export function generateSteps( {
 		'domains-with-preview': {
 			stepName: 'domains-with-preview',
 			apiRequestFunction: createSitelessCart,
-			providesDependencies: [ 'siteId', 'siteSlug', 'domainItem' ],
+			providesDependencies: [ 'siteId', 'siteSlug', 'domainItem', 'shouldHideFreePlan' ],
+			optionalDependencies: [ 'shouldHideFreePlan' ],
 			props: {
 				showSiteMockups: true,
 				isDomainOnly: false,
