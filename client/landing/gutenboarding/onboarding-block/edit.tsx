@@ -17,7 +17,6 @@ import CreateSite from './create-site';
 import { Attributes } from './types';
 import { Step, usePath } from '../path';
 import './style.scss';
-import VerticalBackground from './vertical-background';
 import AcquireIntent from './acquire-intent';
 
 const OnboardingEdit: FunctionComponent< BlockEditProps< Attributes > > = () => {
@@ -28,7 +27,6 @@ const OnboardingEdit: FunctionComponent< BlockEditProps< Attributes > > = () => 
 
 	return (
 		<>
-			<VerticalBackground />
 			{ isCreatingSite && <Redirect push to={ makePath( Step.CreateSite ) } /> }
 			<Switch>
 				<Route exact path={ makePath( Step.IntentGathering ) }>
